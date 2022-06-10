@@ -1,6 +1,10 @@
 const X_CLASS = 'x'
 const CIRCLE_CLASS = 'circle'
-
+// (TOP) Je gebruikt comments overal
+// (TOP) Je hebt const gebruikt voor functies en geen VAR als ik
+// (TOP) Het is zeer overzichtelijk
+// (TIP) Zou het niet beter zijn om bijvoorbeeld een naam te kunnen invullen, in plaats van "O's" of "X's" heeft gewonnen?
+// (Soort van TIP) Overal, is het allemaal overduidelijk
 //De variabelen die je nodig hebt voor de figuren die je moet plaatsen
 const WINNING_COMBINATIONS = [
   [0, 1, 2],
