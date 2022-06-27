@@ -1,3 +1,10 @@
+
+  function myOnClickFn(){
+    document.location.href="start.html";
+   }
+   
+
+
 const X_CLASS = 'x'
 const CIRCLE_CLASS = 'circle'
 
@@ -55,13 +62,13 @@ function handleClick(e) {
   }
 }
 
-//Ala je hebt gewonnen dan is het het einde van de game, anders sta je tegelijk en kan worden de beurten omgeruild.
+//Als je hebt gewonnen dan is het het einde van de game, anders sta je tegelijk en kan worden de beurten omgeruild.
 
 function endGame(draw) {
   if (draw) {
-    winningMessageTextElement.innerText = 'Draw!'
+    winningMessageTextElement.innerText = 'Gelijkspel!'
   } else {
-    winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
+    winningMessageTextElement.innerText = `${circleTurn ? "Player 1" : "Player 2"} Wint!`
   }
   winningMessageElement.classList.add('show')
 }
@@ -102,3 +109,4 @@ function checkWin(currentClass) {
   })
 }
 //checked of je hebt gewonnen en als je gewonnen hebt krijgt je een win scherm te zien
+
