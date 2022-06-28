@@ -23,8 +23,10 @@ Om het spel te kunnen installeren moet je het volgende doen:
 * Nadat je dat hebt gedaan kun je het project vervolgens vinden en downloaden.
 
 ## Gameplay componenten
-*
-*
+* Een startscherm.
+* Een knop om terug te gaan naar het start scherm.
+* Een game over of/ je hebt gewonnen scherm.
+* Een knop om de game opnieuw te kunnen spelen.
 
 ## Link naar Review
 https://github.com/TechniekCollegeRotterdam/p4-javascript-Jxylia/pull/2
