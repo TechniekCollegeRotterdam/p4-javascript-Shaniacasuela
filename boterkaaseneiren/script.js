@@ -8,7 +8,7 @@
 const X_CLASS = 'x'
 const CIRCLE_CLASS = 'circle'
 
-//De variabelen die je nodig hebt voor de figuren die je moet plaatsen
+//De variabelen die je nodig hebt voor de figuren die je moet plaatsen.
 const WINNING_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
@@ -20,13 +20,15 @@ const WINNING_COMBINATIONS = [
   [2, 4, 6]
 ]
 
-// De combinaties van winnen die mogelijk zijn in het spel, de plaatsen waarop ze geplaatst worden om te winnen
+// De combinaties van winnen die mogelijk zijn in het spel, de plaatsen waarop ze geplaatst worden om te winnen, verticaal en horizontaal en schuin.
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]')
 let circleTurn
+
+// De variabelen van elements die gebruikt worden in de game.
 
 startGame()
 
@@ -42,11 +44,11 @@ function startGame() {
     cell.addEventListener('click', handleClick, { once: true })
   })
 
-//Zorgt ervoor dat je de game kunt starten
+//Zorgt ervoor dat je de game kunt starten door te kunnen klikken op vakken en een O of X in te vullen.
   setBoardHoverClass()
   winningMessageElement.classList.remove('show')
 }
-//zorgt ervoor dat je de game kunt starten door boven een vak te hangen
+//zorgt ervoor dat je de game kunt starten door boven een vak te hangen.
 
 function handleClick(e) {
   const cell = e.target
@@ -62,7 +64,7 @@ function handleClick(e) {
   }
 }
 
-//Als je hebt gewonnen dan is het het einde van de game, anders sta je tegelijk en kan worden de beurten omgeruild.
+//Placemark, checks voor win, Checks voor gelijkspel, draait de rollen om.
 
 function endGame(draw) {
   if (draw) {
@@ -79,6 +81,8 @@ function isDraw() {
     return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
   })
 }
+
+//zorgt ervoor dat als bijde spelers verloren hebben het eindigt in een gelijkspel door beide variabelen op te roepen.
 
 function placeMark(cell, currentClass) {
   cell.classList.add(currentClass)
@@ -99,14 +103,14 @@ function setBoardHoverClass() {
   }
 }
 
-//zorgt ervoor dat je boven vakken hangt met verschillende figuren omste beurten
+//zorgt ervoor dat je boven vakken hangt met verschillende figuren omste beurten.
 
 function checkWin(currentClass) {
   return WINNING_COMBINATIONS.some(combination => {
-    return combination.every(index => {
+    return combination.every(index => {''
       return cellElements[index].classList.contains(currentClass)
     })
   })
 }
-//checked of je hebt gewonnen en als je gewonnen hebt krijgt je een win scherm te zien en zorgt dat je daarna terecht komt bij het speelscherm.
+//checked of je hebt gewonnen en als je gewonnen hebt door middel van de winning cominations, return cellelements brengt je terug bij het begin van het spel waar er nog niks is ingevuld.
 
