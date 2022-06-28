@@ -72,7 +72,7 @@ function endGame(draw) {
   }
   winningMessageElement.classList.add('show')
 }
-// Deze code zorgt ervoor dat als X en O tegelijk staan je een "Draw!" te zien krijgt
+// Deze code zorgt ervoor dat als X en O tegelijk staan je een "Draw!" te zien krijgt of je krijgt te zien wanneer er iemand heeft gewonnen.
 
 function isDraw() {
   return [...cellElements].every(cell => {
@@ -108,5 +108,5 @@ function checkWin(currentClass) {
     })
   })
 }
-//checked of je hebt gewonnen en als je gewonnen hebt krijgt je een win scherm te zien
+//checked of je hebt gewonnen en als je gewonnen hebt krijgt je een win scherm te zien en zorgt dat je daarna terecht komt bij het speelscherm.
 
